@@ -29,12 +29,20 @@ body {
     font-size: 18px;
     line-height: 27px;
 
-    background-color: #242424;
+    color: white;
+
+    background-color: #353535;
+}
+
+.visually-hidden{
+    display: none;
 }
 
 
 .page-header {
     min-width: 320px;
+
+    background-color: black;
 }
 
 .page-header__logo {
@@ -199,7 +207,7 @@ body {
         bottom: -24px;
     }
 
-    .site-list__item a:hover::before{
+    .site-list__item a:hover::before {
         width: 100%;
     }
 
@@ -233,7 +241,7 @@ body {
         width: 16px;
         height: 16px;
 
-        background-image: url(../img/login.svg);
+        background-image: url("../img/login.svg");
         background-repeat: no-repeat;
         background-position: 0 0;
 
@@ -242,6 +250,35 @@ body {
 
     .user-list__enter {
         display: none;
+    }
+
+    .page-header__logo img {
+
+        width: 370px;
+        height: auto;
+
+
+    }
+
+    .page-header__logo {
+        position: relative;
+        margin-top: 70px;
+    }
+
+    .page-header__logo::before {
+        display: block;
+
+        content: "";
+
+        position: absolute;
+        top: -30px;
+
+        width: 162px;
+        height: 34px;
+
+        background-image: url("../img/logo_up.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
     }
 }
 
@@ -258,6 +295,47 @@ body {
         background-position: top center;
         background-repeat: no-repeat;
     }
+
+    .page-header__logo {
+        position: relative;
+        margin-top: 100px;
+    }
+
+    .page-header__logo::after {
+        display: block;
+
+        content: "";
+
+        position: absolute;
+        top: 90px;
+
+        width: 114px;
+        height: 30px;
+
+        background-image: url("../img/logo_down.svg");
+        background-repeat: no-repeat;
+        background-position: 0 0;
+    }
+
+    .site-list__item:not(.site-list__item--active) {
+        margin: 0 33px;
+    }
+
+    .site-list__item--active {
+        margin: 0 33px;
+    }
+
+    .user-list__enter{
+        display: inline-block;
+
+        transition: color 300ms linear;
+    }
+
+    .user-list__enter:hover{
+        color: #826550;
+    }
+
+
 }
 
 
