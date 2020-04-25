@@ -1,0 +1,264 @@
+/* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "PTSans-NarrowBold";
+
+    src: url("../fonts/fonts/PTSansNarrow-Bold.woff") format("woff"), /* Modern Browsers */ url("../fonts/fonts/PTSansNarrow-Bold.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "PTSans-NarrowRegular";
+
+    src: url("../fonts/fonts/PTSansNarrow-Regular.woff") format("woff"), /* Modern Browsers */ url("../fonts/fonts/PTSansNarrow-Regular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: "PTSans-NarrowRegular", Arial, sans-serif;
+    font-size: 18px;
+    line-height: 27px;
+
+    background-color: #242424;
+}
+
+
+.page-header {
+    min-width: 320px;
+}
+
+.page-header__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 85px;
+}
+
+
+.page-header__logo img {
+    display: block;
+}
+
+.main-nav {
+    display: flex;
+
+    height: 50px;
+
+    background-color: #826550;
+}
+
+.main-nav__toggle {
+    position: absolute;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 70px;
+    height: 50px;
+    border: none;
+
+    background-color: #6a4d38;
+
+    cursor: pointer;
+
+    transition: background-color 300ms linear;
+}
+
+.main-nav__toggle:hover {
+    background-color: #624530;
+}
+
+.main-nav__wrapper {
+    width: 100%;
+}
+
+.main-nav__list {
+    list-style: none;
+
+}
+
+.site-list__item:not(.site-list__item--active) {
+    display: none;
+}
+
+.site-list__item--active {
+    margin-top: 11px;
+
+    text-align: center;
+}
+
+.site-list__item--active a {
+    font-family: "PTSans-NarrowBold", Arial, sans-serif;
+    text-transform: uppercase;
+
+    color: white;
+}
+
+.user-list {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .page-header {
+        display: flex;
+        flex-direction: column;
+
+        height: 470px;
+
+        background-image: url("../img/back-desktop.jpg");
+        background-size: 100%;
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+
+    .page-header__logo {
+        order: 2;
+    }
+
+    .main-nav {
+        order: 1;
+
+        height: 75px;
+
+        background-color: black;
+    }
+
+    .main-nav__toggle {
+        display: none;
+    }
+
+    .main-nav__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-nav__list {
+        display: flex;
+
+    }
+
+    .user-list {
+        margin-left: 30px;
+    }
+
+    .site-list__item a {
+        font-family: "PTSans-NarrowBold", Arial, sans-serif;
+        text-transform: uppercase;
+
+        color: white;
+
+        transition: color 300ms linear;
+    }
+
+
+    .site-list__item a:hover {
+        color: #826550;
+    }
+
+    .site-list__item:not(.site-list__item--active) {
+        display: inline-block;
+
+        margin: 0 15px;
+    }
+
+    .site-list__item--active {
+        display: inline-block;
+
+        margin: 0 15px;
+    }
+
+    .site-list__item a {
+        display: inline-block;
+        position: relative;
+        text-decoration: none;
+    }
+
+    .site-list__item a::before {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 3px;
+        width: 0;
+        background: #826550;
+        transition: width 0.3s ease-in-out;
+        left: 0;
+        bottom: -24px;
+    }
+
+    .site-list__item a:hover::before{
+        width: 100%;
+    }
+
+
+    .user-list__item {
+        margin: 0 15px;
+
+        position: relative;
+
+
+    }
+
+    .user-list__login {
+        display: inline-block;
+
+        font-family: "PTSans-NarrowBold", Arial, sans-serif;
+        text-transform: uppercase;
+
+        color: white;
+    }
+
+    .user-list__login::before {
+        display: inline-block;
+
+        content: "";
+
+        position: absolute;
+        top: 5px;
+        left: -30px;
+
+        width: 16px;
+        height: 16px;
+
+        background-image: url(../img/login.svg);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+
+        opacity: .3;
+    }
+
+    .user-list__enter {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .page-header {
+        display: flex;
+        flex-direction: column;
+
+        height: 720px;
+
+        background-image: url("../img/back-desktop.jpg");
+        background-size: 100%;
+
+        background-position: top center;
+        background-repeat: no-repeat;
+    }
+}
+
+
+
